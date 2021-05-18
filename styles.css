@@ -1,0 +1,31 @@
+.allProducts {
+  border: 2px solid #DFA612;
+  color: black;
+  display: flex;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.products {
+  flex-basis: 100%;
+  flex-grow: 1;
+  padding: 10px;
+}
+
+.drag {
+  background-color: #11f9ce;
+  font-weight: normal;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.drop {
+  background-color: #9bbd10;
+  flex-basis: 100%;
+  flex-grow: 1;
+  padding: 10px;
+}
+img{
+    width: 20%;
+}
