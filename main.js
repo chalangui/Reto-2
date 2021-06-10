@@ -1,6 +1,10 @@
 function drop(event) {
     let id = event.dataTransfer.getData('text');
     let draggableElement = document.getElementById(id);
+    let price = draggableElement.getElementsByClassName("product_price")[0].innerHTML;
+    let cartPrice = document.getElementsByClassName('price')[0].textContent ;
+    document.getElementsByClassName('price')[0].textContent = parseInt(price) + parseInt(cartPrice)
+    console.log(cartPrice);
     let dropzone = event.target;
     draggableElement.insertAdjacentHTML(
         'beforeend',
@@ -16,6 +20,9 @@ function deleteElement(event){
     let dragablezone = document.getElementById('products');
     element.removeChild(element.lastChild)
     element.style.backgroundColor = '#11f9ce';
+    let price = element.getElementsByClassName("product_price")[0].innerHTML;
+    let cartPrice = document.getElementsByClassName('price')[0].textContent ;
+    document.getElementsByClassName('price')[0].textContent = parseInt(cartPrice) - parseInt(price);
     dragablezone.appendChild(element);
 
 }
